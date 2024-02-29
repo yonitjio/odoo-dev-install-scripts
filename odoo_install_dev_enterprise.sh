@@ -19,8 +19,6 @@ OE_PORT="8069"
 OE_VERSION="17.0"
 # Set this to True if you want to install the Odoo enterprise version!
 IS_ENTERPRISE="True"
-# Set the superadmin password
-OE_SUPERADMIN="admin"
 
 #--------------------------------------------------
 # Install ODOO
@@ -78,8 +76,6 @@ echo -e "* Create server config file"
 touch ${OE_CONFIG}
 echo -e "* Creating server config file"
 printf '[options] \n; This is the password that allows database operations:\n' >> ${OE_CONFIG}
-# shellcheck disable=SC2016
-printf 'admin_passwd = %s\n' "${OE_SUPERADMIN}" >> ${OE_CONFIG}
 # shellcheck disable=SC2072
 if [ $OE_VERSION \> "11.0" ];then
     # shellcheck disable=SC2016
