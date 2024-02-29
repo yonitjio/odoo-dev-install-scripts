@@ -1,12 +1,12 @@
 #!/bin/bash
 ################################################################################
-# Modified from odoo_install.sh from Author: Yenthe Van Ginneken for 
+# Modified from odoo_install.sh from Author: Yenthe Van Ginneken for
 # development machine
 # Part 2 of 2 scripts
 # This part installs odoo in a virtual environment
 ################################################################################
 
-OE_HOME="/home/yoni/odoo-dev/17.0.community"
+OE_HOME="/home/$(logname)/odoo-dev/17.0.community"
 OE_HOME_EXT="$OE_HOME/odoo"
 OE_HOME_VENV="$OE_HOME/.venv"
 
@@ -19,7 +19,7 @@ OE_PORT="8069"
 OE_VERSION="17.0"
 # Set this to True if you want to install the Odoo enterprise version!
 IS_ENTERPRISE="False"
-# Set the superadmin password 
+# Set the superadmin password
 OE_SUPERADMIN="admin"
 
 #--------------------------------------------------
