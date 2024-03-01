@@ -47,3 +47,44 @@ chmod +x odoo_install_dev_enterprise.sh
 ```
 ./odoo_install_dev_enterprise.sh
 ```
+
+## Parameters
+Some of the original parameters are removed as they are not needed (my opinion).
+
+You can modify them the same way the original scripts.
+
+## What's Next
+Up on successful installation, Odoo source code will be installed in current user home directory. E.g:
+* Community edition
+```
+/home/<current_user>/odoo-dev/17.0.community
+```
+* Enterprise edition
+```
+/home/<current_user>/odoo-dev/17.0.enterprise
+```
+
+#### Tips for Beginner with VS Code
+You can use the following as your `launch.json` file:
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    {
+      "name": "Odoo",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceRoot}/odoo/odoo-bin",
+      "args": ["-c", "${workspaceFolder}/odoo.conf"],
+      "gevent": false,
+      "envFile": "${workspaceFolder}/debug.env",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "python": "${workspaceRoot}/.venv/bin/python3"
+    }
+  ]
+}
+```
