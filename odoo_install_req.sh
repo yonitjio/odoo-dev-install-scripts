@@ -11,7 +11,7 @@ OE_USER=$(logname)
 # Set to true if you want to install it, false if you don't need it or have it already installed.
 INSTALL_WKHTMLTOPDF="True"
 # Install postgreSQL or not
-INSTALL_POSTGRESQL = "True"
+INSTALL_POSTGRESQL="True"
 # Installs postgreSQL V14 instead of defaults (e.g V12 for Ubuntu 20/22) - this improves performance
 INSTALL_POSTGRESQL_FOURTEEN="True"
 
