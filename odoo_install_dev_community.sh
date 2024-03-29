@@ -5,8 +5,8 @@
 # Part 2 of 2 scripts
 # This part installs odoo in a virtual environment
 ################################################################################
-
-OE_HOME="/home/$(logname)/odoo-dev/17.0.community"
+OE_LOGNAME=${SUDO_USER:-${USER}}
+OE_HOME="/home/$OE_LOGNAME/odoo-dev/17.0.community"
 OE_HOME_EXT="$OE_HOME/odoo"
 OE_HOME_VENV="$OE_HOME/.venv"
 
