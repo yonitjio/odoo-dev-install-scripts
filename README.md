@@ -88,3 +88,11 @@ You can use the following as your `launch.json` file:
   ]
 }
 ```
+
+#### Tips for WSL2
+1. Before running `odoo_install_req.sh`, edit the file and change line 9 from `OE_USER=$(logname)` to `OE_USER=${SUDO_USER:-${USER}}`.
+2. The script may fail to create user for PostgreSQL, if this happens you need to create the user manually:
+   ```bash
+   sudo su - postgres -c "createuser -s <CHANGE_THIS_TO_YOUR_USER_NAME>" 2> /dev/null || true
+   ```
+3. If you're using VS Code, you will need to install [VS Code Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) or at the very least [VS Code WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
