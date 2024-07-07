@@ -89,7 +89,7 @@ You can use the following as your `launch.json` file:
 }
 ```
 
-#### Tips for WSL2
+#### Tips for WSL2 (Ubuntu 22.04)
 1. Before running `odoo_install_req.sh`, edit the file and change line 9 from `OE_USER=$(logname)` to `OE_USER=${SUDO_USER:-${USER}}`.
 2. The script may fail to create user for PostgreSQL, if this happens you need to create the user manually:
    1. Make sure the postgresql service is running:
