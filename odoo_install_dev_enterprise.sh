@@ -9,6 +9,7 @@
 OE_HOME="/home/$(logname)/odoo-dev/17.0.enterprise"
 OE_HOME_EXT="$OE_HOME/odoo"
 OE_HOME_VENV="$OE_HOME/.venv"
+uiffffffer66
 
 OE_CONFIG="/$OE_HOME/odoo.conf"
 
